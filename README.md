@@ -1,2 +1,2 @@
-# lab01
+# my home lab setup.
 my first lab setup
