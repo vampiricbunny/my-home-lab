@@ -55,7 +55,7 @@ What games, what, why, and how. I spoke to my friend, and at the time we decided
 dont starve:
 https://hub.docker.com/r/jmarques15/dont-starve-together
 
-## Don'nt Starve:
+## Don't Starve:
 Dont-Starve-Together-Server:
 
 This is a simple Dont Starve Together server I created to learn and consolidate some docker concepts related to the building of images and running multi-container solutions.
@@ -67,6 +67,7 @@ Add a cluster name and click 'Add new server' and finally copy the token.
 Starting the server
 Configure environment variables as necessary.
 Simple single shard (no caves)
+
 docker run -d --name dst_master \
 -e DST_NAME="<name>" \
 -e DST_DESCRIPTION="<description>" \
@@ -106,6 +107,8 @@ docker run -d --network dst_network -name dst_caves \
 -e DST_SHARD=Caves \
 -v dst-cluster-config:/home/LinuxGSM/.klei/DoNotStarveTogether/Cluster_1/ \
 jmarques15/dont-starve-together
+
+![alt text](<dont starve together.jpg>)
 ---------
 Note that, as we did with a few playthoughts, we decided to add mods and some custom characters. This was not as easy as it sounds, but I ended up pulling that off as well. 
 
@@ -159,7 +162,10 @@ Notes on the run command
     -p is the port it connects to, -p host_port:docker_port
     -v is the volume you are mounting -v host_dir:docker_dir
     rlenferink/minecraft is how this docker image is called
+![alt text](minecraft01.png)
+![alt text](minecraft02.png)
 
+---------
 ## Satisfactory 
 note: this was not the same from a while back its not working so im posting this incase somebody would like to copy this on a low end system:
 
@@ -177,7 +183,10 @@ services:
     restart: 'unless-stopped'
     environment:
       - MAXPLAYERS=4
+![alt text](Satisfactory-1.jpg)
 
+
+---------
 ## Locking it all down:
 (if new use this >)
 https://hub.docker.com/r/zoeyvid/nginx-proxy-manager/tags
@@ -246,7 +255,7 @@ Install Fail2ban
     Wire Guard for external access
 
 
-----
+---------
 
 ## Adding in things proves to be a bad idea:
 I decided to add Nextcloud, or Owncloud, for easy file sharing. This allows me to give people files as I wish, using a simple Duck DNS address with Nginx as the backend. At this time, I do not own a DNS or domain, so I chose to go with DuckDNS as it's free and I have no income. 
